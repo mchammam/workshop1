@@ -1,4 +1,8 @@
-function fizzBuzz(max = 100) {
+export function fizzBuzz(max = 100) {
+  if (!Number.isInteger(max) || Number.isNaN(max)) {
+    throw new Error('Input is not a valid integer')
+  }
+
   const result = []
 
   for (let i = 1; i <= max; i++) {
